@@ -1,0 +1,26 @@
+.box {
+    max-width: 767px;
+    background-color: white;   
+}
+
+.newTasks__box {
+    display: grid;
+    grid-template-rows: 50px 70px;
+    grid-gap: 2px 5px;
+    margin: 10px;
+}
+
+.tasksList__box {
+    display: grid;
+    grid-template-rows: 50px 70px;
+    grid-gap: 2px 5px;
+    margin: 10px; 
+}
+
+.flex__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    flex-wrap: wrap;
+}

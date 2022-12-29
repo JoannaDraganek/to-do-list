@@ -1,0 +1,80 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    background-color: rgb(236, 235, 235);
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-template-rows: 50px 70px;
+    grid-gap: 75px 5px;
+    margin: auto 40px;
+}
+
+.header {
+    margin: 70px 0px 0px 10px; 
+    font-size: 30px;   
+}
+
+.button {
+    background-color: teal;
+    color: white;
+    margin: 10px;
+    padding: 2px;
+}
+
+.inputWindow {
+    min-width: 600px;
+    margin: 10px;
+}
+
+.paragraph {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.picture {
+    max-width: 10px;
+}
+
+.notDone {
+    max-width: 30px;
+    min-height: 20px;
+    height: auto;
+    resize: both;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../images/notDone.JPG");
+}
+
+.done {
+    max-width: 30px;
+    min-height: 20px;
+    height: auto;
+    resize: both;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../images/done.JPG");
+}
+
+.binButton {
+    max-width: 30px;
+    min-height: 20px;
+    height: auto;
+    resize: both;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../images/binIcon.JPG");
+}
