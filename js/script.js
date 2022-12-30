@@ -33,45 +33,43 @@
 
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
-                toggleTaskDone(index);
+                removeTask(index);
             });
         });
+
 
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
-            const notDone = document.querySelector(".notDone");
             toggleDoneButton.addEventListener("click", () => {
-                notDone.classList.toggle(".done");
-            });
-        });
-
-        const binButtons = document.querySelectorAll(".js-bin");
-
-        binButtons.forEach((binButton, index) => {
-            binButton.addEventListener("click", () => {
-                removeTask(index);
+                toggleTaskDone(index);
             });
         });
     };
 
     const render = () => {
         let htmlString = "";
-
         for (const task of tasks) {
             htmlString += `
-            <li 
-            ${task.done ? "☑️" : "☐"}
+            <li class="flex__boxList"
             >
-            <button class="js-done notDone"></button>
-            <button class="js-bin binButton"></button>
+            <button class="js-done  ${task.done ? "buttonDone" : "buttonNotDone"}"></button>
             ${task.content}
+            <button class="js-remove binButton"></button>
+           
             </li>
             `;
+ const toggleCheckMarkButton = (changeCheckMarkButton) => {
+            const buttonNotDone = document.querySelector(".buttonNotDone");
+            buttonNotDone.classList.toggle(".buttonDone");
+            CheckMarkButton.innerText = body.classList.contains(".buttonNotDone") ? "niezrobione" : "zrobione";
+        };
         };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
         bindEvents();
+
+       
     };
 
     const onFormSubmit = (event) => {

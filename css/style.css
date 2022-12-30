@@ -13,19 +13,15 @@ html {
     grid-template-rows: 50px 70px;
     grid-gap: 75px 5px;
     margin: auto 40px;
+    max-width: 992px;
 }
+
 
 .header {
     margin: 70px 0px 0px 10px; 
     font-size: 30px;   
 }
 
-.button {
-    background-color: teal;
-    color: white;
-    margin: 10px;
-    padding: 2px;
-}
 
 .inputWindow {
     min-width: 600px;
@@ -40,41 +36,4 @@ html {
 
 .picture {
     max-width: 10px;
-}
-
-.notDone {
-    max-width: 30px;
-    min-height: 20px;
-    height: auto;
-    resize: both;
-    overflow: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: url("../images/notDone.JPG");
-}
-
-.done {
-    max-width: 30px;
-    min-height: 20px;
-    height: auto;
-    resize: both;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: url("../images/done.JPG");
-}
-
-.binButton {
-    max-width: 30px;
-    min-height: 20px;
-    height: auto;
-    resize: both;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: url("../images/binIcon.JPG");
 }
