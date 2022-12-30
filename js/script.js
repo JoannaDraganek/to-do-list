@@ -40,7 +40,7 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-            <li class="flex__boxList"
+            <li class="flex__boxList ${task.done ? "flex__boxList--done" : "flex__boxList"}"
             >
             <button class="js-done  ${task.done ? "buttonDone" : "buttonNotDone"}"></button>
             ${task.content}
@@ -57,8 +57,6 @@
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
         bindEvents();
-
-
     };
 
     const onFormSubmit = (event) => {

@@ -32,3 +32,7 @@
     align-items:center;
     flex-wrap: nowrap;
 }
+
+.flex__boxList--done {
+    text-decoration-line: line-through;
+}
