@@ -1,20 +1,10 @@
 {
-    const tasks = [
-        {
-            content: "zrobić zadanko domowe",
-            done: false,
-        },
-        {
-            content: "upiec makowca",
-            done: true,
-        },
-    ];
+    const tasks = [ ];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
         });
-
         render();
     };
 
@@ -36,7 +26,6 @@
                 removeTask(index);
             });
         });
-
 
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
@@ -75,12 +64,15 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
-
-        if (newTaskContent === "") {
-            return;
+        const newTaskElement = document.querySelector(".js-newTask");
+        const newTaskContent = newTaskElement.value.trim();
+    
+        if (newTaskContent !== "") {
+          addNewTask(newTaskContent);
+          newTaskElement.value = "";
         }
-        addNewTask(newTaskContent);
+    
+        newTaskElement.focus();
     };
 
     const init = () => {
