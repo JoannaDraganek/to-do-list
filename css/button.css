@@ -48,9 +48,12 @@
     .buttonDone {
         width: 50%;
     }
+
     .buttonNotDone {
-    width: 50%;
+        width: 50%;
     }
+
     .binButton {
-    width: 50%;
+        width: 50%;
     }
+}

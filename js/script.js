@@ -59,17 +59,17 @@
            
             </li>
             `;
- const toggleCheckMarkButton = (changeCheckMarkButton) => {
-            const buttonNotDone = document.querySelector(".buttonNotDone");
-            buttonNotDone.classList.toggle(".buttonDone");
-            CheckMarkButton.innerText = body.classList.contains(".buttonNotDone") ? "niezrobione" : "zrobione";
-        };
+            const toggleCheckMarkButton = (changeCheckMarkButton) => {
+                const buttonNotDone = document.querySelector(".buttonNotDone");
+                buttonNotDone.classList.toggle(".buttonDone");
+                CheckMarkButton.innerText = body.classList.contains(".buttonNotDone") ? "niezrobione" : "zrobione";
+            };
         };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
         bindEvents();
 
-       
+
     };
 
     const onFormSubmit = (event) => {
@@ -80,7 +80,7 @@
         if (newTaskContent === "") {
             return;
         }
-        addNewTask(newTaskContent);   
+        addNewTask(newTaskContent);
     };
 
     const init = () => {

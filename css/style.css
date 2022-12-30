@@ -16,12 +16,10 @@ html {
     max-width: 992px;
 }
 
-
 .header {
-    margin: 70px 0px 0px 10px; 
-    font-size: 30px;   
+    margin: 70px 0px 0px 10px;
+    font-size: 30px;
 }
-
 
 .inputWindow {
     min-width: 600px;
