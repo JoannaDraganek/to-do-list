@@ -1,0 +1,95 @@
+.tasks {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tasks__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 767px) {
+    .tasks__item {
+        grid-template-columns: 1fr;
+    }
+}
+
+.task--done {
+    text-decoration-line: line-through;
+}
+
+.task__buttonToggleDone {
+    max-width: 30px;
+    min-height: 20px;
+    background-image: url("../images/done.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+}
+
+.task__buttonToggleDone:hover {
+    outline: 2px;
+    outline-style: solid;
+    outline-color: rgb(78, 255, 78);  
+}
+
+.task__buttonToggleNotDone {
+    max-width: 30px;
+    min-height: 20px;
+    background-image: url("../images/notDone.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+}
+
+.task__buttonToggleNotDone:hover {
+    outline: 2px;
+    outline-style: solid;
+    outline-color: rgb(78, 255, 78);  
+}
+
+.task__binButton {
+    max-width: 30px;
+    min-height: 20px;
+    background-image: url("../images/binIcon.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: none;
+}
+
+.task__binButton:hover {
+    outline: 2px;
+    outline-style: solid;
+    outline-color: rgb(173, 10, 10);   
+}
+
+@media (max-width: 767px) {
+    .task__buttonToggleDone {
+        width: 50%;
+    }
+
+    .task__buttonToggleNotDone {
+        width: 50%;
+    }
+
+    .task__binButton {
+        width: 50%;
+    }
+}

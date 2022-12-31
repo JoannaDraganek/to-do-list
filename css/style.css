@@ -9,29 +9,5 @@ html {
 .body {
     background-color: rgb(236, 235, 235);
     font-family: 'Lato', sans-serif;
-    display: grid;
-    grid-template-rows: 50px 70px;
-    grid-gap: 75px 5px;
-    margin: auto 40px;
-    max-width: 992px;
-}
-
-.header {
-    margin: 70px 0px 0px 10px;
-    font-size: 30px;
-}
-
-.inputWindow {
-    min-width: 600px;
-    margin: 10px;
-}
-
-.paragraph {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px;
-}
-
-.picture {
-    max-width: 10px;
+    margin: 0 auto;
 }
