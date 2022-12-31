@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista zadań</title>
+    <link rel="icon" href="images/iconList.png">
+    <meta property="og:image" content="images/planer.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/style.css" rel="stylesheet">
     <link href="css/box.css" rel="stylesheet">
-    <link href="css/button.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/tasks.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -19,37 +23,23 @@
 </head>
 
 <body class="body">
-    <div>
+    <main class="box">
         <header>
-            <h1 class="header">Lista zadań</h1>
+            <h1>Lista zadań</h1>
         </header>
-    </div>
-    <div class="newTasks__box">
-        <div class="box">
-            <p class="paragraph">Dodaj nowe zadanie</p>
-        </div>
-    
-        <form class="js-form box flex__box">
-            <div>
-                <input class="js-newTask inputWindow" name="name" placeholder="Co jest do zrobienia?" autofocus>
-            </div>
-            <div>
-                <button class="button">
+
+        <section class="section">
+            <h2 class="section__header"> Dodaj nowe zadanie</h2>
+            <form class="form js-form section__body">
+                <input class="form__input js-newTask" name="name" placeholder="Co jest do zrobienia?" autofocus>
+                <button class="form__button">
                     Dodaj zadanie
                 </button>
-            </div>
-        </form>
-    </div>
-    
-<div class="tasksList__box ">
-    <div class="box">
-        <p class="paragraph">Lista zadań</p>
-    </div>
-    <div class="box">
-        <ul class="js-tasks box"></ul>
-    </div>
-</div>
-    
-
-
+            </form>
+        </section>
+        <section class="section ">
+            <h2 class="section__header">Lista zadań</h2>
+            <ul class="tasks js-tasks section__body"></ul>
+        </section>
+    </main>
 </body>
