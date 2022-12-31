@@ -6,7 +6,7 @@ https://joannadraganek.github.io/to-do-list/
 
 ## How it's work
 
-![to-do list gif](https://imgur.com/Ye3Yads.gif)
+![to-do list gif](https://imgur.com/sEz4nvF.gif)
 
 ## Description
 Here you can see a to-do list app.
