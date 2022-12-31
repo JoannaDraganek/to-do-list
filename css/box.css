@@ -1,38 +1,4 @@
 .box {
-    max-width: 767px;
-    background-color: white;   
-}
-
-.newTasks__box {
-    display: grid;
-    grid-template-rows: 50px 70px;
-    grid-gap: 2px 5px;
-    margin: 10px;
-}
-
-.tasksList__box {
-    display: grid;
-    grid-template-rows: 50px 70px;
-    grid-gap: 2px 5px;
-    margin: 10px; 
-}
-
-.flex__box {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items:center;
-    flex-wrap: wrap;
-}
-
-.flex__boxList {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
-    flex-wrap: nowrap;
-}
-
-.flex__boxList--done {
-    text-decoration-line: line-through;
+    max-width: 992px;
+    margin: 0 auto;
 }
