@@ -1,5 +1,5 @@
 {
-    const tasks = [ ];
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -40,19 +40,12 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-            <li class="flex__boxList ${task.done ? "flex__boxList--done" : "flex__boxList"}"
-            >
-            <button class="js-done  ${task.done ? "buttonDone" : "buttonNotDone"}"></button>
-            ${task.content}
-            <button class="js-remove binButton"></button>
-           
-            </li>
-            `;
-            const toggleCheckMarkButton = (changeCheckMarkButton) => {
-                const buttonNotDone = document.querySelector(".buttonNotDone");
-                buttonNotDone.classList.toggle(".buttonDone");
-                CheckMarkButton.innerText = body.classList.contains(".buttonNotDone") ? "niezrobione" : "zrobione";
-            };
+            <li 
+            class="tasks__item ${task.done ? "task--done" : "task"}">
+            <button class="js-done  ${task.done ? "task__buttonToggleDone" : "task__buttonToggleNotDone"}"></button>
+            <span>${task.content}</span>
+            <button class="js-remove task__binButton"></button>
+            </li>`;
         };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
@@ -64,12 +57,12 @@
 
         const newTaskElement = document.querySelector(".js-newTask");
         const newTaskContent = newTaskElement.value.trim();
-    
+
         if (newTaskContent !== "") {
-          addNewTask(newTaskContent);
-          newTaskElement.value = "";
+            addNewTask(newTaskContent);
+            newTaskElement.value = "";
         }
-    
+
         newTaskElement.focus();
     };
 
