@@ -25,7 +25,7 @@
 }
 
 @media (max-width: 767px) {
-    .section__headerBox {
+    .section__headerButtonsBox {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 3fr;
