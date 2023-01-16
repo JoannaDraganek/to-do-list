@@ -117,27 +117,35 @@
         bindButtonsEvents();
       };
 
-    const onFormSubmit = (event) => {
+      const focusInput = () => {
+        document.querySelector(".js-newTask").focus();
+      };
+    
+      const clearInput = () => {
+        document.querySelector(".js-newTask").value = "";
+      };
+    
+      const onFormSubmit = (event) => {
         event.preventDefault();
-
+    
         const newTaskElement = document.querySelector(".js-newTask");
         const newTaskContent = newTaskElement.value.trim();
-
+    
         if (newTaskContent !== "") {
-            addNewTask(newTaskContent);
-            newTaskElement.value = "";
+          addNewTask(newTaskContent);
         }
-
-        newTaskElement.focus();
-    };
-
-    const init = () => {
+    
+        focusInput();
+        clearInput();
+      };
+    
+      const init = () => {
         render();
-
+    
         const form = document.querySelector(".js-form");
-
+    
         form.addEventListener("submit", onFormSubmit);
-    };
-
-    init();
+      };
+    
+      init();
 }
