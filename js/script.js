@@ -75,21 +75,47 @@
         };
       };
 
-    const render = () => {
+      const renderTasks = () => {
         let htmlString = "";
+    
         for (const task of tasks) {
-            htmlString += `
-            <li 
-            class="tasks__item ${task.done ? "task--done" : "task"}">
-            <button class="js-done  ${task.done ? "task__buttonToggleDone" : "task__buttonToggleNotDone"}"></button>
-            <span>${task.content}</span>
-            <button class="js-remove task__binButton"></button>
-            </li>`;
+          htmlString +=  `
+          <button class="js-done task__button task__buttonToggleDone">${task.done ? "✓" : " "}</button>
+          <li class="tasks__item ${task.done && hiddenDoneTasks ? "task__item--hidden" : ""}">
+            <span class="tasks ${task.done ? "task--done" : ""}">${task.content}</span>
+          </li> 
+          <button class="js-remove task__button task__binButton">️🗑️</button>
+          `;
         };
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-        bindEvents();
-    };
+    
+       document.querySelector(".js-tasks").innerHTML = htmlString;
+      };
+    
+      const renderButtons = () => {
+        let buttonsBox = "";
+    
+        if (tasks.length > 0) {
+          buttonsBox += `
+          <button class="section__tasksListButtons js-hideDoneTasks">
+          ${hiddenDoneTasks ? "Pokaż " : "Ukryj "}ukończone
+          </button>
+          <button class="section__tasksListButtons js-setAllDone"
+          ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+          Ukończ wszystkie
+          </button>
+          `;
+        }
+        document.querySelector(".js-tasksBoxButtons").innerHTML = buttonsBox;
+      };
+    
+      const render = () => {
+        renderTasks();
+        renderButtons();
+    
+        bindRemoveEvents();
+        bindToggleDoneEvents();
+        bindButtonsEvents();
+      };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
