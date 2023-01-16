@@ -21,8 +21,10 @@
     color: white;
     padding: 10px;
     border: none;
+    transition: background 1s, transform 2s linear;
 }
 
 .form__button:hover {
+    transform: scale(1.2);
     background-color: rgb(6, 197, 197);
 }
