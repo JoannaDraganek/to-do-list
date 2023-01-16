@@ -2,7 +2,7 @@
 
 ## How it's work
 
-![to-do list gif](https://imgur.com/FiMlhTx)
+![to-do list gif](https://i.imgur.com/FiMlhTx.gif)
 
 ## Description
 Here you can see a to-do list app.
