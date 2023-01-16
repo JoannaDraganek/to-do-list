@@ -1,83 +1,70 @@
 .tasks {
+    max-width: 100%;
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.tasks__item {
+.tasks__box {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-gap: 10px;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    border-bottom: none;
+    list-style: none
 }
 
 @media (max-width: 767px) {
-    .tasks__item {
-        grid-template-columns: 1fr;
+    .tasks__box {
+        grid-template-columns: 1fr 2fr 1fr;
     }
+}
+
+.task__item {
+    list-style: none;
+    max-width: 100%;
+}
+
+.task__item--hidden {
+    display: noun;
 }
 
 .task--done {
     text-decoration-line: line-through;
 }
 
-.task__buttonToggleDone {
+.task__button {
     max-width: 30px;
-    min-height: 20px;
-    background-image: url("../images/done.JPG");
-    background-repeat: no-repeat;
-    background-position: center;
+    max-height: 30px;
     display: flex;
+    color: white;
     align-items: center;
     justify-content: center;
-    padding: 12px;
+    font-size: 15px;
+    padding: 20px;
+    margin: auto;
     border: none;
+}
+
+.task__buttonToggleDone {
+    background-color: rgb(1, 107, 1);
+    transition: 1s;
 }
 
 .task__buttonToggleDone:hover {
-    outline: 2px;
-    outline-style: solid;
-    outline-color: rgb(78, 255, 78);  
-}
-
-.task__buttonToggleNotDone {
-    max-width: 30px;
-    min-height: 20px;
-    background-image: url("../images/notDone.JPG");
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    border: none;
-}
-
-.task__buttonToggleNotDone:hover {
-    outline: 2px;
-    outline-style: solid;
-    outline-color: rgb(78, 255, 78);  
+    background-color: rgb(1, 196, 1);
 }
 
 .task__binButton {
-    max-width: 30px;
-    min-height: 20px;
-    background-image: url("../images/binIcon.JPG");
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    border: none;
+    background-color: rgb(202, 4, 4);
+    transition: 1s;
 }
 
 .task__binButton:hover {
-    outline: 2px;
-    outline-style: solid;
-    outline-color: rgb(173, 10, 10);   
+    background-color: rgb(247, 36, 36);
 }
 
 @media (max-width: 767px) {
